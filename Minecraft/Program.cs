@@ -105,6 +105,7 @@ namespace Minecraft
                             Console.WriteLine("----------");
                             Console.WriteLine("{0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -121,6 +122,7 @@ namespace Minecraft
                             Console.WriteLine("----------");
                             Console.WriteLine("{0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -137,6 +139,7 @@ namespace Minecraft
                             Console.WriteLine("----------");
                             Console.WriteLine(" {0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -153,6 +156,7 @@ namespace Minecraft
                             Console.WriteLine("----------");
                             Console.WriteLine("{0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -186,6 +190,7 @@ namespace Minecraft
                             Console.WriteLine("----------");
                             Console.WriteLine("{0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -202,6 +207,7 @@ namespace Minecraft
                             Console.WriteLine("----------");
                             Console.WriteLine("{0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -218,6 +224,7 @@ namespace Minecraft
                             Console.WriteLine("----------");
                             Console.WriteLine(" {0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -234,6 +241,7 @@ namespace Minecraft
                             Console.WriteLine("----------");
                             Console.WriteLine("{0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -267,6 +275,7 @@ namespace Minecraft
                             Console.WriteLine("----------");
                             Console.WriteLine("{0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -283,6 +292,7 @@ namespace Minecraft
                             Console.WriteLine("----------");
                             Console.WriteLine("{0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -299,6 +309,7 @@ namespace Minecraft
                             Console.WriteLine("----------");
                             Console.WriteLine(" {0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -315,6 +326,7 @@ namespace Minecraft
                             Console.WriteLine("----------");
                             Console.WriteLine("{0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -349,6 +361,7 @@ namespace Minecraft
                             Console.WriteLine("----------");
                             Console.WriteLine("{0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -358,12 +371,14 @@ namespace Minecraft
                     {
                         Console.ForegroundColor = ConsoleColor.DarkGray;
                         Console.WriteLine("Hacken...........{0}", Stein);
+                        Console.ForegroundColor= ConsoleColor.White;
                         if (i == Anzahl - Schläge)
                         {
                             Console.ForegroundColor = ConsoleColor.DarkGray;
                             Console.WriteLine("----------");
                             Console.WriteLine("{0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -380,6 +395,7 @@ namespace Minecraft
                             Console.WriteLine("----------");
                             Console.WriteLine(" {0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -396,6 +412,7 @@ namespace Minecraft
                             Console.WriteLine("----------");
                             Console.WriteLine("{0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -428,6 +445,7 @@ namespace Minecraft
                             Console.WriteLine("----------");
                             Console.WriteLine("{0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -437,12 +455,14 @@ namespace Minecraft
                     {
                         Console.ForegroundColor = ConsoleColor.Gray;
                         Console.WriteLine("Hacken...........{0}", Eisen);
+                        Console.ForegroundColor = ConsoleColor.White;
                         if (i == Anzahl - Schläge)
                         {
                             Console.ForegroundColor = ConsoleColor.Gray;
                             Console.WriteLine("----------");
                             Console.WriteLine("{0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -459,12 +479,13 @@ namespace Minecraft
                             Console.WriteLine("----------");
                             Console.WriteLine(" {0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
                 else if (werkzeug == Werkzeuge.Spitzhacke)
                 {
-                    for (int i = 1; i < Anzahl - (Schläge + 2); i++)
+                    for (int i = 1; i < Anzahl - Schläge; i++)
                     {
                         Console.ForegroundColor = ConsoleColor.Gray;
                         Console.WriteLine("Abbauen...........{0}", Eisen);
@@ -475,6 +496,91 @@ namespace Minecraft
                             Console.WriteLine("----------");
                             Console.WriteLine("{0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    public class Goldblöcke : Blöcke
+    {
+        public string Gold = "Goldblock";
+
+        public Goldblöcke(int Anzahl, int Schläge, Werkzeuge werkzeug) : base(Anzahl, Schläge, werkzeug)
+        {
+            this.Anzahl = Anzahl;
+            this.Schläge = Schläge;
+        }
+        public override void Abbau()
+        {
+            if (Console.BackgroundColor == ConsoleColor.Black)
+            {
+                if (werkzeug == Werkzeuge.Hand)
+                {
+                    for (int i = 1; i < Anzahl - Schläge; i++)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Schlagen...........{0}", Gold);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - Schläge)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine("----------");
+                            Console.WriteLine("{0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            break;
+                        }
+                    }
+                }
+                else if (werkzeug == Werkzeuge.Axt)
+                {
+                    for (int i = 1; i < Anzahl - (Schläge + 1); i++)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Hacken...........{0}", Gold);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - Schläge)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine("----------");
+                            Console.WriteLine("{0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            break;
+                        }
+                    }
+                }
+                else if (werkzeug == Werkzeuge.Schaufel)
+                {
+                    for (int i = 1; i < Anzahl - Schläge; i++)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Schaufeln...........{0}", Gold);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - Schläge)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine("----------");
+                            Console.WriteLine(" {0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            break;
+                        }
+                    }
+                }
+                else if (werkzeug == Werkzeuge.Spitzhacke)
+                {
+                    for (int i = 1; i < Anzahl - (Schläge + 2); i++)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("Abbauen...........{0}", Gold);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - (Schläge + 2))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine("----------");
+                            Console.WriteLine("{0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                            break;
                         }
                     }
                 }
@@ -489,12 +595,14 @@ namespace Minecraft
             Block1.Abbau();
             Erdblöcke Block2 = new Erdblöcke(19, 3, Werkzeuge.Axt);
             Block2.Abbau();
-            Holzblöcke Block3 = new Holzblöcke(50, 2, Werkzeuge.Spitzhacke);
+            Holzblöcke Block3 = new Holzblöcke(25, 2, Werkzeuge.Spitzhacke);
             Block3.Abbau();
             Steinblöcke Block4 = new Steinblöcke(10, 1, Werkzeuge.Schaufel);
             Block4.Abbau();
             Eisenblöcke Block5 = new Eisenblöcke(10, 1, Werkzeuge.Spitzhacke);
             Block5.Abbau();
+            Goldblöcke Block6 = new Goldblöcke(12, 3, Werkzeuge.Hand);
+            Block6.Abbau();
         }
     }
 }
