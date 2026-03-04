@@ -81,7 +81,7 @@ namespace Minecraft
 
     public class Grass : Blöcke
     {
-        public string Gras = "Gras";
+        public string Gras = "Grasblock";
 
         public Grass(int Anzahl, int Schläge, Werkzeuge werkzeug) : base(Anzahl, Schläge, werkzeug)
         {
@@ -163,7 +163,7 @@ namespace Minecraft
     }
     public class Erden : Blöcke
     {
-        public string Erde = "Erde";
+        public string Erde = "Erdblock";
 
         public Erden(int Anzahl, int Schläge, Werkzeuge werkzeug) : base(Anzahl, Schläge, werkzeug)
         {
@@ -244,7 +244,7 @@ namespace Minecraft
     }
     public class Hölzer : Blöcke
     {
-        public string Holz = "Holz";
+        public string Holz = "Holzblock";
 
         public Hölzer(int Anzahl, int Schläge, Werkzeuge werkzeug) : base(Anzahl, Schläge, werkzeug)
         {
@@ -327,7 +327,7 @@ namespace Minecraft
 
     public class Steine : Blöcke
     {
-        public string Stein = "Stein";
+        public string Stein = "Steinblock";
 
         public Steine(int Anzahl, int Schläge, Werkzeuge werkzeug) : base(Anzahl, Schläge, werkzeug)
         {
