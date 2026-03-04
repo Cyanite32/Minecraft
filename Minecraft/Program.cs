@@ -115,7 +115,7 @@ namespace Minecraft
                     for (int i = 1; i < Anzahl - (Schläge + 2); i++)
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("Hacken...........{0}", Gras);
+                        Console.WriteLine("hacken...........{0}", Gras);
                         Console.ForegroundColor = ConsoleColor.White;
                         if (i == Anzahl - (Schläge + 2))
                         {
