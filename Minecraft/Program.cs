@@ -211,7 +211,7 @@ namespace Minecraft
                 {
                     for (int i = 1; i < Anzahl - (Schläge + 1); i++)
                     {
-                        Console.ForegroundColor= ConsoleColor.DarkRed;
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("Schlagen...........{0}", Erde);
                         Console.ForegroundColor = ConsoleColor.White;
                         if (i == Anzahl - (Schläge + 1))
@@ -260,7 +260,7 @@ namespace Minecraft
                 {
                     for (int i = 1; i < Anzahl - (Schläge + 1); i++)
                     {
-                        Console.ForegroundColor= ConsoleColor.DarkYellow;
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
                         Console.WriteLine("Schlagen...........{0}", Holz);
                         Console.ForegroundColor = ConsoleColor.White;
                         if (i == Anzahl - (Schläge * 1))
@@ -308,7 +308,7 @@ namespace Minecraft
                 {
                     for (int i = 1; i < Anzahl - (Schläge + 1); i++)
                     {
-                        Console.ForegroundColor= ConsoleColor.DarkYellow;
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
                         Console.WriteLine("Schlagen...........{0}", Holz);
                         Console.ForegroundColor = ConsoleColor.White;
                         if (i == Anzahl - (Schläge + 1))
@@ -347,7 +347,7 @@ namespace Minecraft
                         Console.ForegroundColor = ConsoleColor.White;
                         if (i == Anzahl - (Schläge + 1))
                         {
-                            Console.ForegroundColor= ConsoleColor.DarkGray;
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
                             Console.WriteLine("----------");
                             Console.WriteLine("{0} ist kaputt ", werkzeug);
                             Console.ForegroundColor = ConsoleColor.White;
