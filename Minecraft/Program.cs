@@ -4,13 +4,11 @@ using static Minecraft.Blöcke;
 
 namespace Minecraft
 {
-
     public abstract class Blöcke
     {
         public int Anzahl;
 
         public int Schläge = 1;
-
 
         public enum Werkzeuge
         {
@@ -404,7 +402,6 @@ namespace Minecraft
             }
         }
     }
-
     internal class Program
     {
         static void Main(string[] args)
