@@ -96,6 +96,7 @@ namespace Minecraft
                     Console.WriteLine("Schlagen...........{0}", Gras);
                     if (i == Anzahl - (Schläge + 1))
                     {
+                        Console.WriteLine("----------");
                         Console.WriteLine("{0} ist kaputt ", werkzeug);
                     }
                 }
@@ -107,6 +108,7 @@ namespace Minecraft
                     Console.WriteLine("Schlagen...........{0}", Gras);
                     if (i == Anzahl - (Schläge + 2))
                     {
+                        Console.WriteLine("----------");
                         Console.WriteLine("{0} ist kaputt ", werkzeug);
                     }
                 }
@@ -118,6 +120,7 @@ namespace Minecraft
                     Console.WriteLine("Schlagen...........{0}", Gras);
                     if (i == Anzahl - (Schläge + 2))
                     {
+                        Console.WriteLine("----------");
                         Console.WriteLine(" {0} ist kaputt ", werkzeug);
                     }
                 }
@@ -126,9 +129,10 @@ namespace Minecraft
             {
                 for (int i = 1; i < Anzahl - (Schläge + 2); i++)
                 {
-                    Console.WriteLine("Schlagen...........{0}", Gras);
+                    Console.WriteLine("Schlagen...........{0}", Gras);      
                     if (i == Anzahl - (Schläge + 2))
                     {
+                        Console.WriteLine("----------");
                         Console.WriteLine("{0} ist kaputt ", werkzeug);
                     }
                 }
@@ -154,6 +158,7 @@ namespace Minecraft
                     Console.WriteLine("Schlagen...........{0}", Erde);
                     if (i == Anzahl - (Schläge * 1))
                     {
+                        Console.WriteLine("----------");
                         Console.WriteLine("{0} ist kaputt ", werkzeug);
                     }
                 }
@@ -165,6 +170,7 @@ namespace Minecraft
                     Console.WriteLine("Schlagen...........{0}", Erde);
                     if (i == Anzahl - (Schläge * 2))
                     {
+                        Console.WriteLine("----------");
                         Console.WriteLine("{0} ist kaputt ", werkzeug);
                     }
                 }
@@ -176,6 +182,7 @@ namespace Minecraft
                     Console.WriteLine("Schlagen...........{0}", Erde);
                     if (i == Anzahl - (Schläge + 1))
                     {
+                        Console.WriteLine("----------");
                         Console.WriteLine(" {0} ist kaputt ", werkzeug);
                     }
                 }
@@ -187,6 +194,7 @@ namespace Minecraft
                     Console.WriteLine("Schlagen...........{0}", Erde);
                     if (i == Anzahl - (Schläge + 2))
                     {
+                        Console.WriteLine("----------");
                         Console.WriteLine("{0} ist kaputt ", werkzeug);
                     }
                 }
@@ -213,6 +221,7 @@ namespace Minecraft
                     Console.WriteLine("Schlagen...........{0}", Holz);
                     if (i == Anzahl - (Schläge * 1))
                     {
+                        Console.WriteLine("----------");
                         Console.WriteLine("{0} ist kaputt ", werkzeug);
                     }
                 }
@@ -224,6 +233,7 @@ namespace Minecraft
                     Console.WriteLine("Schlagen...........{0}", Holz);
                     if (i == Anzahl - (Schläge + 2))
                     {
+                        Console.WriteLine("----------");
                         Console.WriteLine("{0} ist kaputt ", werkzeug);
                     }
                 }
@@ -235,6 +245,7 @@ namespace Minecraft
                     Console.WriteLine("Schlagen...........{0}", Holz);
                     if (i == Anzahl - (Schläge + 1))
                     {
+                        Console.WriteLine("----------");
                         Console.WriteLine(" {0} ist kaputt ", werkzeug);
                     }
                 }
@@ -246,6 +257,7 @@ namespace Minecraft
                     Console.WriteLine("Schlagen...........{0}", Holz);
                     if (i == Anzahl - (Schläge + 1))
                     {
+                        Console.WriteLine("----------");
                         Console.WriteLine("{0} ist kaputt ", werkzeug);
                     }
                 }
@@ -272,6 +284,7 @@ namespace Minecraft
                     Console.WriteLine("Schlagen...........{0}", Stein);
                     if (i == Anzahl - (Schläge + 1))
                     {
+                        Console.WriteLine("----------");
                         Console.WriteLine("{0} ist kaputt ", werkzeug);
                     }
                 }
@@ -283,6 +296,7 @@ namespace Minecraft
                     Console.WriteLine("Schlagen...........{0}", Stein);
                     if (i == Anzahl - (Schläge + 1))
                     {
+                        Console.WriteLine("----------");
                         Console.WriteLine("{0} ist kaputt ", werkzeug);
                     }
                 }
@@ -294,6 +308,7 @@ namespace Minecraft
                     Console.WriteLine("Schlagen...........{0}", Stein);
                     if (i == Anzahl - (Schläge + 1))
                     {
+                        Console.WriteLine("----------");
                         Console.WriteLine(" {0} ist kaputt ", werkzeug);
                     }
                 }
@@ -305,6 +320,7 @@ namespace Minecraft
                     Console.WriteLine("Schlagen...........{0}", Stein);
                     if (i == Anzahl - (Schläge + 2))
                     {
+                        Console.WriteLine("----------");
                         Console.WriteLine("{0} ist kaputt ", werkzeug);
                     }
                 }
@@ -318,11 +334,11 @@ namespace Minecraft
     {
         static void Main(string[] args)
         {
-            Grass Block1 = new Grass(1, 0, Werkzeuge.Hand);
+            Grass Block1 = new Grass(3, 0, Werkzeuge.Hand);
             Block1.Abbau();
-            Erden Block2 = new Erden(2, 0, Werkzeuge.Axt);
+            Erden Block2 = new Erden(5, 0, Werkzeuge.Axt);
             Block2.Abbau();
-            Hölzer Block3 = new Hölzer(10, 0, Werkzeuge.Spitzhacke);
+            Hölzer Block3 = new Hölzer(10, 2, Werkzeuge.Spitzhacke);
             Block3.Abbau();
             Steine Block4 = new Steine(5, 0, Werkzeuge.Schaufel);
             Block4.Abbau();
