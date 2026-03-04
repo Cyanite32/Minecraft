@@ -1,6 +1,4 @@
-﻿using Minecraft;
-using System.Drawing;
-using static Minecraft.Blöcke;
+﻿using static Minecraft.Blöcke;
 
 namespace Minecraft
 {
