@@ -41,7 +41,7 @@ namespace Minecraft
             {
                 for (int i = 1; i < Anzahl - (Schläge * 2); i++)
                 {
-                    Console.WriteLine("Schlagen...........Luft");
+                    Console.WriteLine("Hacken...........Luft");
                     if (i == Anzahl - (Schläge * 2))
                     {
                         Console.WriteLine(" nix ist kaputt ");
@@ -52,7 +52,7 @@ namespace Minecraft
             {
                 for (int i = 1; i < Anzahl - (Schläge * 3); i++)
                 {
-                    Console.WriteLine("Schlagen...........Luft");
+                    Console.WriteLine("Schaufeln...........Luft");
                     if (i == Anzahl - (Schläge * 3))
                     {
                         Console.WriteLine(" nix ist kaputt ");
@@ -63,7 +63,7 @@ namespace Minecraft
             {
                 for (int i = 1; i < Anzahl - (Schläge * 4); i++)
                 {
-                    Console.WriteLine("Schlagen...........Luft");
+                    Console.WriteLine("Abbauen...........Luft");
                     if (i == Anzahl - (Schläge * 4))
                     {
                         Console.WriteLine(" nix ist kaputt ");
@@ -115,7 +115,7 @@ namespace Minecraft
                     for (int i = 1; i < Anzahl - (Schläge + 2); i++)
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("Schlagen...........{0}", Gras);
+                        Console.WriteLine("hacken...........{0}", Gras);
                         Console.ForegroundColor = ConsoleColor.White;
                         if (i == Anzahl - (Schläge + 2))
                         {
@@ -131,7 +131,7 @@ namespace Minecraft
                     for (int i = 1; i < Anzahl - (Schläge + 2); i++)
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("Schlagen...........{0}", Gras);
+                        Console.WriteLine("Schaufeln...........{0}", Gras);
                         Console.ForegroundColor = ConsoleColor.White;
                         if (i == Anzahl - (Schläge + 2))
                         {
@@ -147,7 +147,7 @@ namespace Minecraft
                     for (int i = 1; i < Anzahl - (Schläge + 2); i++)
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("Schlagen...........{0}", Gras);
+                        Console.WriteLine("Abbauen...........{0}", Gras);
                         Console.ForegroundColor = ConsoleColor.White;
                         if (i == Anzahl - (Schläge + 2))
                         {
@@ -196,7 +196,7 @@ namespace Minecraft
                     for (int i = 1; i < Anzahl - (Schläge * 2); i++)
                     {
                         Console.ForegroundColor = ConsoleColor.DarkRed;
-                        Console.WriteLine("Schlagen...........{0}", Erde);
+                        Console.WriteLine("Hacken...........{0}", Erde);
                         Console.ForegroundColor = ConsoleColor.White;
                         if (i == Anzahl - (Schläge * 2))
                         {
@@ -212,7 +212,7 @@ namespace Minecraft
                     for (int i = 1; i < Anzahl - (Schläge + 1); i++)
                     {
                         Console.ForegroundColor = ConsoleColor.DarkRed;
-                        Console.WriteLine("Schlagen...........{0}", Erde);
+                        Console.WriteLine("Schaufeln...........{0}", Erde);
                         Console.ForegroundColor = ConsoleColor.White;
                         if (i == Anzahl - (Schläge + 1))
                         {
@@ -228,7 +228,7 @@ namespace Minecraft
                     for (int i = 1; i < Anzahl - (Schläge + 2); i++)
                     {
                         Console.ForegroundColor = ConsoleColor.DarkRed;
-                        Console.WriteLine("Schlagen...........{0}", Erde);
+                        Console.WriteLine("Abbauen...........{0}", Erde);
                         Console.ForegroundColor = ConsoleColor.White;
                         if (i == Anzahl - (Schläge + 2))
                         {
@@ -277,7 +277,7 @@ namespace Minecraft
                     for (int i = 1; i < Anzahl - (Schläge + 2); i++)
                     {
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        Console.WriteLine("Schlagen...........{0}", Holz);
+                        Console.WriteLine("Hacken...........{0}", Holz);
                         Console.ForegroundColor = ConsoleColor.White;
                         if (i == Anzahl - (Schläge + 2))
                         {
@@ -293,7 +293,7 @@ namespace Minecraft
                     for (int i = 1; i < Anzahl - (Schläge * 3); i++)
                     {
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        Console.WriteLine("Schlagen...........{0}", Holz);
+                        Console.WriteLine("Schaufeln...........{0}", Holz);
                         Console.ForegroundColor = ConsoleColor.White;
                         if (i == Anzahl - (Schläge + 1))
                         {
@@ -309,7 +309,7 @@ namespace Minecraft
                     for (int i = 1; i < Anzahl - (Schläge + 1); i++)
                     {
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
-                        Console.WriteLine("Schlagen...........{0}", Holz);
+                        Console.WriteLine("Abbauen...........{0}", Holz);
                         Console.ForegroundColor = ConsoleColor.White;
                         if (i == Anzahl - (Schläge + 1))
                         {
@@ -359,7 +359,7 @@ namespace Minecraft
                     for (int i = 1; i < Anzahl - (Schläge * 1); i++)
                     {
                         Console.ForegroundColor = ConsoleColor.DarkGray;
-                        Console.WriteLine("Schlagen...........{0}", Stein);
+                        Console.WriteLine("Hacken...........{0}", Stein);
                         if (i == Anzahl - (Schläge + 1))
                         {
                             Console.ForegroundColor = ConsoleColor.DarkGray;
@@ -374,7 +374,7 @@ namespace Minecraft
                     for (int i = 1; i < Anzahl - (Schläge * 1); i++)
                     {
                         Console.ForegroundColor = ConsoleColor.DarkGray;
-                        Console.WriteLine("Schlagen...........{0}", Stein);
+                        Console.WriteLine("Schaufeln...........{0}", Stein);
                         Console.ForegroundColor = ConsoleColor.White;
                         if (i == Anzahl - (Schläge + 1))
                         {
@@ -390,7 +390,7 @@ namespace Minecraft
                     for (int i = 1; i < Anzahl - (Schläge + 2); i++)
                     {
                         Console.ForegroundColor = ConsoleColor.DarkGray;
-                        Console.WriteLine("Schlagen...........{0}", Stein);
+                        Console.WriteLine("Abbauen...........{0}", Stein);
                         Console.ForegroundColor = ConsoleColor.White;
                         if (i == Anzahl - (Schläge + 2))
                         {
