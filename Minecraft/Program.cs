@@ -1,4 +1,5 @@
-﻿using static Minecraft.Blöcke;
+﻿using Minecraft;
+using static Minecraft.Blöcke;
 
 namespace Minecraft
 {
@@ -29,13 +30,13 @@ namespace Minecraft
                 for (int i = 1; i < Anzahl - (Schläge * 1); i++)
                 {
                     Console.WriteLine("Schlagen...........Luft");
-                    if (i == Anzahl - (Schläge*1))
+                    if (i == Anzahl - (Schläge * 1))
                     {
                         Console.WriteLine(" nix ist kaputt ");
                     }
                 }
             }
-            else if(werkzeug == Werkzeuge.Axt)
+            else if (werkzeug == Werkzeuge.Axt)
             {
                 for (int i = 1; i < Anzahl - (Schläge * 2); i++)
                 {
@@ -46,7 +47,7 @@ namespace Minecraft
                     }
                 }
             }
-            else if(werkzeug == Werkzeuge.Schaufel)
+            else if (werkzeug == Werkzeuge.Schaufel)
             {
                 for (int i = 1; i < Anzahl - (Schläge * 3); i++)
                 {
@@ -57,7 +58,7 @@ namespace Minecraft
                     }
                 }
             }
-            else if(werkzeug == Werkzeuge.Spitzhacke)
+            else if (werkzeug == Werkzeuge.Spitzhacke)
             {
                 for (int i = 1; i < Anzahl - (Schläge * 4); i++)
                 {
@@ -67,7 +68,7 @@ namespace Minecraft
                         Console.WriteLine(" nix ist kaputt ");
                     }
                 }
-            }   
+            }
         }
         public Blöcke(int Anzahl, int Schläge, Werkzeuge werkzeug)
         {
@@ -90,45 +91,45 @@ namespace Minecraft
         {
             if (werkzeug == Werkzeuge.Hand)
             {
-                for (int i = 1; i < Anzahl - (Schläge * 1); i++)
+                for (int i = 1; i < Anzahl - (Schläge + 1); i++)
                 {
                     Console.WriteLine("Schlagen...........{0}", Gras);
-                    if (i == Anzahl - (Schläge * 1))
+                    if (i == Anzahl - (Schläge + 1))
                     {
-                        Console.WriteLine("{0} ist kaputt ", Werkzeuge.Hand);
+                        Console.WriteLine("{0} ist kaputt ", werkzeug);
                     }
                 }
             }
             else if (werkzeug == Werkzeuge.Axt)
             {
-                for (int i = 1; i < Anzahl - (Schläge * 2); i++)
+                for (int i = 1; i < Anzahl - (Schläge + 2); i++)
                 {
                     Console.WriteLine("Schlagen...........{0}", Gras);
-                    if (i == Anzahl - (Schläge * 2))
+                    if (i == Anzahl - (Schläge + 2))
                     {
-                        Console.WriteLine("{0} ist kaputt ", Werkzeuge.Axt);
+                        Console.WriteLine("{0} ist kaputt ", werkzeug);
                     }
                 }
             }
             else if (werkzeug == Werkzeuge.Schaufel)
             {
-                for (int i = 1; i < Anzahl - (Schläge * 3); i++)
+                for (int i = 1; i < Anzahl - (Schläge + 2); i++)
                 {
                     Console.WriteLine("Schlagen...........{0}", Gras);
-                    if (i == Anzahl - (Schläge * 3))
+                    if (i == Anzahl - (Schläge + 2))
                     {
-                        Console.WriteLine(" nix ist kaputt ");
+                        Console.WriteLine(" {0} ist kaputt ", werkzeug);
                     }
                 }
             }
             else if (werkzeug == Werkzeuge.Spitzhacke)
             {
-                for (int i = 1; i < Anzahl - (Schläge * 4); i++)
+                for (int i = 1; i < Anzahl - (Schläge + 2); i++)
                 {
-                    Console.WriteLine("Schlagen...........Luft");
-                    if (i == Anzahl - (Schläge * 4))
+                    Console.WriteLine("Schlagen...........{0}", Gras);
+                    if (i == Anzahl - (Schläge + 2))
                     {
-                        Console.WriteLine(" nix ist kaputt ");
+                        Console.WriteLine("{0} ist kaputt ", werkzeug);
                     }
                 }
             }
@@ -145,18 +146,54 @@ namespace Minecraft
             this.werkzeug = werkzeug;
         }
         public override void Abbau()
-        {       
-            for (int i = 1; i <= Anzahl - Schläge; i++)
+        {
+            if (werkzeug == Werkzeuge.Hand)
             {
-                Console.WriteLine("Schlagen...........{0}", Erde);
-
-                if (i == Anzahl)
+                for (int i = 1; i < Anzahl - (Schläge * 1); i++)
                 {
-                    Console.WriteLine(" {0} ist kaputt ", werkzeug);
+                    Console.WriteLine("Schlagen...........{0}", Erde);
+                    if (i == Anzahl - (Schläge * 1))
+                    {
+                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                    }
+                }
+            }
+            else if (werkzeug == Werkzeuge.Axt)
+            {
+                for (int i = 1; i < Anzahl - (Schläge * 2); i++)
+                {
+                    Console.WriteLine("Schlagen...........{0}", Erde);
+                    if (i == Anzahl - (Schläge * 2))
+                    {
+                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                    }
+                }
+            }
+            else if (werkzeug == Werkzeuge.Schaufel)
+            {
+                for (int i = 1; i < Anzahl - (Schläge + 1); i++)
+                {
+                    Console.WriteLine("Schlagen...........{0}", Erde);
+                    if (i == Anzahl - (Schläge + 1))
+                    {
+                        Console.WriteLine(" {0} ist kaputt ", werkzeug);
+                    }
+                }
+            }
+            else if (werkzeug == Werkzeuge.Spitzhacke)
+            {
+                for (int i = 1; i < Anzahl - (Schläge + 2); i++)
+                {
+                    Console.WriteLine("Schlagen...........{0}", Erde);
+                    if (i == Anzahl - (Schläge + 2))
+                    {
+                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                    }
                 }
             }
         }
     }
+
     public class Hölzer : Blöcke
     {
         public string Holz = "Holz";
@@ -165,20 +202,56 @@ namespace Minecraft
         {
             this.Anzahl = Anzahl;
             this.Schläge = Schläge;
-            this.werkzeug= werkzeug;
+            this.werkzeug = werkzeug;
         }
         public override void Abbau()
         {
-            for (int i = 1; i <= Anzahl - Schläge; i++)
+            if (werkzeug == Werkzeuge.Hand)
             {
-                Console.WriteLine("Schlagen...........{0}", Holz);
-
-                if (i == Anzahl)
+                for (int i = 1; i < Anzahl - (Schläge + 1); i++)
                 {
-                    Console.WriteLine(" {0} ist kaputt ", werkzeug);
+                    Console.WriteLine("Schlagen...........{0}", Holz);
+                    if (i == Anzahl - (Schläge * 1))
+                    {
+                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                    }
+                }
+            }
+            else if (werkzeug == Werkzeuge.Axt)
+            {
+                for (int i = 1; i < Anzahl - (Schläge + 2); i++)
+                {
+                    Console.WriteLine("Schlagen...........{0}", Holz);
+                    if (i == Anzahl - (Schläge + 2))
+                    {
+                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                    }
+                }
+            }
+            else if (werkzeug == Werkzeuge.Schaufel)
+            {
+                for (int i = 1; i < Anzahl - (Schläge * 3); i++)
+                {
+                    Console.WriteLine("Schlagen...........{0}", Holz);
+                    if (i == Anzahl - (Schläge + 1))
+                    {
+                        Console.WriteLine(" {0} ist kaputt ", werkzeug);
+                    }
+                }
+            }
+            else if (werkzeug == Werkzeuge.Spitzhacke)
+            {
+                for (int i = 1; i < Anzahl - (Schläge + 1); i++)
+                {
+                    Console.WriteLine("Schlagen...........{0}", Holz);
+                    if (i == Anzahl - (Schläge + 1))
+                    {
+                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                    }
                 }
             }
         }
+
     }
 
     public class Steine : Blöcke
@@ -192,16 +265,52 @@ namespace Minecraft
         }
         public override void Abbau()
         {
-            for (int i = 1; i <= Anzahl - Schläge; i++)
+            if (werkzeug == Werkzeuge.Hand)
             {
-                Console.WriteLine("Schlagen...........{0}", Stein);
-
-                if (i == Anzahl - Schläge)
+                for (int i = 1; i < Anzahl - (Schläge * 1); i++)
                 {
-                    Console.WriteLine(" {0} ist kaputt ", werkzeug);
+                    Console.WriteLine("Schlagen...........{0}", Stein);
+                    if (i == Anzahl - (Schläge + 1))
+                    {
+                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                    }
+                }
+            }
+            else if (werkzeug == Werkzeuge.Axt)
+            {
+                for (int i = 1; i < Anzahl - (Schläge * 1); i++)
+                {
+                    Console.WriteLine("Schlagen...........{0}", Stein);
+                    if (i == Anzahl - (Schläge + 1))
+                    {
+                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                    }
+                }
+            }
+            else if (werkzeug == Werkzeuge.Schaufel)
+            {
+                for (int i = 1; i < Anzahl - (Schläge * 1); i++)
+                {
+                    Console.WriteLine("Schlagen...........{0}", Stein);
+                    if (i == Anzahl - (Schläge + 1))
+                    {
+                        Console.WriteLine(" {0} ist kaputt ", werkzeug);
+                    }
+                }
+            }
+            else if (werkzeug == Werkzeuge.Spitzhacke)
+            {
+                for (int i = 1; i < Anzahl - (Schläge + 2); i++)
+                {
+                    Console.WriteLine("Schlagen...........{0}", Stein);
+                    if (i == Anzahl - (Schläge + 2))
+                    {
+                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                    }
                 }
             }
         }
+
     }
 
 
@@ -209,13 +318,13 @@ namespace Minecraft
     {
         static void Main(string[] args)
         {
-            Grass Block1 = new Grass(1,0,Werkzeuge.Spitzhacke);
+            Grass Block1 = new Grass(1, 0, Werkzeuge.Hand);
             Block1.Abbau();
-            Erden Block2 = new Erden(2, 0, );
+            Erden Block2 = new Erden(2, 0, Werkzeuge.Axt);
             Block2.Abbau();
-            Hölzer Block3 = new Hölzer(10, 0);
+            Hölzer Block3 = new Hölzer(10, 0, Werkzeuge.Spitzhacke);
             Block3.Abbau();
-            Steine Block4 = new Steine(5, 0);
+            Steine Block4 = new Steine(5, 0, Werkzeuge.Schaufel);
             Block4.Abbau();
         }
     }
