@@ -8,7 +8,7 @@ namespace Minecraft
     {
         public int Anzahl;
 
-        public int Schläge = 1;
+        public int Schläge;
 
         public enum Werkzeuge
         {
@@ -77,11 +77,11 @@ namespace Minecraft
         }
     }
 
-    public class Grass : Blöcke
+    public class Grasblöcke : Blöcke
     {
         public string Gras = "Grasblock";
 
-        public Grass(int Anzahl, int Schläge, Werkzeuge werkzeug) : base(Anzahl, Schläge, werkzeug)
+        public Grasblöcke(int Anzahl, int Schläge, Werkzeuge werkzeug) : base(Anzahl, Schläge, werkzeug)
         {
             this.Anzahl = Anzahl;
             this.Schläge = Schläge;
@@ -159,11 +159,11 @@ namespace Minecraft
             }
         }
     }
-    public class Erden : Blöcke
+    public class Erdblöcke : Blöcke
     {
         public string Erde = "Erdblock";
 
-        public Erden(int Anzahl, int Schläge, Werkzeuge werkzeug) : base(Anzahl, Schläge, werkzeug)
+        public Erdblöcke(int Anzahl, int Schläge, Werkzeuge werkzeug) : base(Anzahl, Schläge, werkzeug)
         {
             this.Anzahl = Anzahl;
             this.Schläge = Schläge;
@@ -240,11 +240,11 @@ namespace Minecraft
             }
         }
     }
-    public class Hölzer : Blöcke
+    public class Holzblöcke : Blöcke
     {
         public string Holz = "Holzblock";
 
-        public Hölzer(int Anzahl, int Schläge, Werkzeuge werkzeug) : base(Anzahl, Schläge, werkzeug)
+        public Holzblöcke(int Anzahl, int Schläge, Werkzeuge werkzeug) : base(Anzahl, Schläge, werkzeug)
         {
             this.Anzahl = Anzahl;
             this.Schläge = Schläge;
@@ -323,11 +323,11 @@ namespace Minecraft
 
     }
 
-    public class Steine : Blöcke
+    public class Steinblöcke : Blöcke
     {
         public string Stein = "Steinblock";
 
-        public Steine(int Anzahl, int Schläge, Werkzeuge werkzeug) : base(Anzahl, Schläge, werkzeug)
+        public Steinblöcke(int Anzahl, int Schläge, Werkzeuge werkzeug) : base(Anzahl, Schläge, werkzeug)
         {
             this.Anzahl = Anzahl;
             this.Schläge = Schläge;
@@ -402,18 +402,99 @@ namespace Minecraft
             }
         }
     }
+    public class Eisenblöcke : Blöcke
+    {
+        public string Eisen = "Eisenblock";
+
+        public Eisenblöcke(int Anzahl, int Schläge, Werkzeuge werkzeug) : base(Anzahl, Schläge, werkzeug)
+        {
+            this.Anzahl = Anzahl;
+            this.Schläge = Schläge;
+        }
+        public override void Abbau()
+        {
+            if (Console.BackgroundColor == ConsoleColor.Black)
+            {
+                if (werkzeug == Werkzeuge.Hand)
+                {
+                    for (int i = 1; i < Anzahl - Schläge; i++)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.WriteLine("Schlagen...........{0}", Eisen);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - Schläge)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            Console.WriteLine("----------");
+                            Console.WriteLine("{0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
+                    }
+                }
+                else if (werkzeug == Werkzeuge.Axt)
+                {
+                    for (int i = 1; i < Anzahl - (Schläge + 1); i++)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.WriteLine("Hacken...........{0}", Eisen);
+                        if (i == Anzahl - Schläge)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            Console.WriteLine("----------");
+                            Console.WriteLine("{0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
+                    }
+                }
+                else if (werkzeug == Werkzeuge.Schaufel)
+                {
+                    for (int i = 1; i < Anzahl - Schläge; i++)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.WriteLine("Schaufeln...........{0}", Eisen);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - Schläge)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            Console.WriteLine("----------");
+                            Console.WriteLine(" {0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
+                    }
+                }
+                else if (werkzeug == Werkzeuge.Spitzhacke)
+                {
+                    for (int i = 1; i < Anzahl - (Schläge + 2); i++)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Gray;
+                        Console.WriteLine("Abbauen...........{0}", Eisen);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - (Schläge + 2))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            Console.WriteLine("----------");
+                            Console.WriteLine("{0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
+                    }
+                }
+            }
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
         {
-            Grass Block1 = new Grass(3, 0, Werkzeuge.Hand);
+            Grasblöcke Block1 = new Grasblöcke(5, 1, Werkzeuge.Hand);
             Block1.Abbau();
-            Erden Block2 = new Erden(5, 0, Werkzeuge.Axt);
+            Erdblöcke Block2 = new Erdblöcke(19, 3, Werkzeuge.Axt);
             Block2.Abbau();
-            Hölzer Block3 = new Hölzer(10, 2, Werkzeuge.Spitzhacke);
+            Holzblöcke Block3 = new Holzblöcke(100, 2, Werkzeuge.Spitzhacke);
             Block3.Abbau();
-            Steine Block4 = new Steine(5, 0, Werkzeuge.Schaufel);
+            Steinblöcke Block4 = new Steinblöcke(10, 1, Werkzeuge.Schaufel);
             Block4.Abbau();
+            Eisenblöcke Block5 = new Eisenblöcke(10, 1, Werkzeuge.Spitzhacke);
+            Block5.Abbau();
         }
     }
 }
