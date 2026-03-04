@@ -404,7 +404,6 @@ namespace Minecraft
                 }
             }
         }
-
     }
 
     internal class Program
