@@ -242,7 +242,6 @@ namespace Minecraft
             }
         }
     }
-
     public class Hölzer : Blöcke
     {
         public string Holz = "Holz";
