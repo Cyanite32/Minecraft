@@ -1,4 +1,5 @@
 ﻿using Minecraft;
+using System.Drawing;
 using static Minecraft.Blöcke;
 
 namespace Minecraft
@@ -81,6 +82,7 @@ namespace Minecraft
     public class Grass : Blöcke
     {
         public string Gras = "Gras";
+
         public Grass(int Anzahl, int Schläge, Werkzeuge werkzeug) : base(Anzahl, Schläge, werkzeug)
         {
             this.Anzahl = Anzahl;
@@ -89,51 +91,71 @@ namespace Minecraft
         }
         public override void Abbau()
         {
-            if (werkzeug == Werkzeuge.Hand)
+            if (Console.BackgroundColor == ConsoleColor.Black)
             {
-                for (int i = 1; i < Anzahl - (Schläge + 1); i++)
+                if (werkzeug == Werkzeuge.Hand)
                 {
-                    Console.WriteLine("Schlagen...........{0}", Gras);
-                    if (i == Anzahl - (Schläge + 1))
+                    for (int i = 1; i < Anzahl - (Schläge + 1); i++)
                     {
-                        Console.WriteLine("----------");
-                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Schlagen...........{0}", Gras);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - (Schläge + 1))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("----------");
+                            Console.WriteLine("{0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
                     }
                 }
-            }
-            else if (werkzeug == Werkzeuge.Axt)
-            {
-                for (int i = 1; i < Anzahl - (Schläge + 2); i++)
+                else if (werkzeug == Werkzeuge.Axt)
                 {
-                    Console.WriteLine("Schlagen...........{0}", Gras);
-                    if (i == Anzahl - (Schläge + 2))
+                    for (int i = 1; i < Anzahl - (Schläge + 2); i++)
                     {
-                        Console.WriteLine("----------");
-                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Schlagen...........{0}", Gras);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - (Schläge + 2))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("----------");
+                            Console.WriteLine("{0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
                     }
                 }
-            }
-            else if (werkzeug == Werkzeuge.Schaufel)
-            {
-                for (int i = 1; i < Anzahl - (Schläge + 2); i++)
+                else if (werkzeug == Werkzeuge.Schaufel)
                 {
-                    Console.WriteLine("Schlagen...........{0}", Gras);
-                    if (i == Anzahl - (Schläge + 2))
+                    for (int i = 1; i < Anzahl - (Schläge + 2); i++)
                     {
-                        Console.WriteLine("----------");
-                        Console.WriteLine(" {0} ist kaputt ", werkzeug);
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Schlagen...........{0}", Gras);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - (Schläge + 2))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("----------");
+                            Console.WriteLine(" {0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
                     }
                 }
-            }
-            else if (werkzeug == Werkzeuge.Spitzhacke)
-            {
-                for (int i = 1; i < Anzahl - (Schläge + 2); i++)
+                else if (werkzeug == Werkzeuge.Spitzhacke)
                 {
-                    Console.WriteLine("Schlagen...........{0}", Gras);      
-                    if (i == Anzahl - (Schläge + 2))
+                    for (int i = 1; i < Anzahl - (Schläge + 2); i++)
                     {
-                        Console.WriteLine("----------");
-                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Schlagen...........{0}", Gras);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - (Schläge + 2))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("----------");
+                            Console.WriteLine("{0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
                     }
                 }
             }
@@ -151,51 +173,70 @@ namespace Minecraft
         }
         public override void Abbau()
         {
-            if (werkzeug == Werkzeuge.Hand)
+            if (Console.BackgroundColor == ConsoleColor.Black)
             {
-                for (int i = 1; i < Anzahl - (Schläge * 1); i++)
+                if (werkzeug == Werkzeuge.Hand)
                 {
-                    Console.WriteLine("Schlagen...........{0}", Erde);
-                    if (i == Anzahl - (Schläge * 1))
+                    for (int i = 1; i < Anzahl - (Schläge * 1); i++)
                     {
-                        Console.WriteLine("----------");
-                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        Console.WriteLine("Schlagen...........{0}", Erde);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - (Schläge * 1))
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.WriteLine("----------");
+                            Console.WriteLine("{0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
                     }
                 }
-            }
-            else if (werkzeug == Werkzeuge.Axt)
-            {
-                for (int i = 1; i < Anzahl - (Schläge * 2); i++)
+                else if (werkzeug == Werkzeuge.Axt)
                 {
-                    Console.WriteLine("Schlagen...........{0}", Erde);
-                    if (i == Anzahl - (Schläge * 2))
+                    for (int i = 1; i < Anzahl - (Schläge * 2); i++)
                     {
-                        Console.WriteLine("----------");
-                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        Console.WriteLine("Schlagen...........{0}", Erde);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - (Schläge * 2))
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.WriteLine("----------");
+                            Console.WriteLine("{0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
                     }
                 }
-            }
-            else if (werkzeug == Werkzeuge.Schaufel)
-            {
-                for (int i = 1; i < Anzahl - (Schläge + 1); i++)
+                else if (werkzeug == Werkzeuge.Schaufel)
                 {
-                    Console.WriteLine("Schlagen...........{0}", Erde);
-                    if (i == Anzahl - (Schläge + 1))
+                    for (int i = 1; i < Anzahl - (Schläge + 1); i++)
                     {
-                        Console.WriteLine("----------");
-                        Console.WriteLine(" {0} ist kaputt ", werkzeug);
+                        Console.ForegroundColor= ConsoleColor.DarkRed;
+                        Console.WriteLine("Schlagen...........{0}", Erde);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - (Schläge + 1))
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.WriteLine("----------");
+                            Console.WriteLine(" {0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
                     }
                 }
-            }
-            else if (werkzeug == Werkzeuge.Spitzhacke)
-            {
-                for (int i = 1; i < Anzahl - (Schläge + 2); i++)
+                else if (werkzeug == Werkzeuge.Spitzhacke)
                 {
-                    Console.WriteLine("Schlagen...........{0}", Erde);
-                    if (i == Anzahl - (Schläge + 2))
+                    for (int i = 1; i < Anzahl - (Schläge + 2); i++)
                     {
-                        Console.WriteLine("----------");
-                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        Console.WriteLine("Schlagen...........{0}", Erde);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - (Schläge + 2))
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.WriteLine("----------");
+                            Console.WriteLine("{0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
                     }
                 }
             }
@@ -214,51 +255,70 @@ namespace Minecraft
         }
         public override void Abbau()
         {
-            if (werkzeug == Werkzeuge.Hand)
+            if (Console.BackgroundColor == ConsoleColor.Black)
             {
-                for (int i = 1; i < Anzahl - (Schläge + 1); i++)
+                if (werkzeug == Werkzeuge.Hand)
                 {
-                    Console.WriteLine("Schlagen...........{0}", Holz);
-                    if (i == Anzahl - (Schläge * 1))
+                    for (int i = 1; i < Anzahl - (Schläge + 1); i++)
                     {
-                        Console.WriteLine("----------");
-                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                        Console.ForegroundColor= ConsoleColor.DarkYellow;
+                        Console.WriteLine("Schlagen...........{0}", Holz);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - (Schläge * 1))
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkYellow;
+                            Console.WriteLine("----------");
+                            Console.WriteLine("{0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
                     }
                 }
-            }
-            else if (werkzeug == Werkzeuge.Axt)
-            {
-                for (int i = 1; i < Anzahl - (Schläge + 2); i++)
+                else if (werkzeug == Werkzeuge.Axt)
                 {
-                    Console.WriteLine("Schlagen...........{0}", Holz);
-                    if (i == Anzahl - (Schläge + 2))
+                    for (int i = 1; i < Anzahl - (Schläge + 2); i++)
                     {
-                        Console.WriteLine("----------");
-                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        Console.WriteLine("Schlagen...........{0}", Holz);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - (Schläge + 2))
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkYellow;
+                            Console.WriteLine("----------");
+                            Console.WriteLine("{0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
                     }
                 }
-            }
-            else if (werkzeug == Werkzeuge.Schaufel)
-            {
-                for (int i = 1; i < Anzahl - (Schläge * 3); i++)
+                else if (werkzeug == Werkzeuge.Schaufel)
                 {
-                    Console.WriteLine("Schlagen...........{0}", Holz);
-                    if (i == Anzahl - (Schläge + 1))
+                    for (int i = 1; i < Anzahl - (Schläge * 3); i++)
                     {
-                        Console.WriteLine("----------");
-                        Console.WriteLine(" {0} ist kaputt ", werkzeug);
+                        Console.ForegroundColor = ConsoleColor.DarkYellow;
+                        Console.WriteLine("Schlagen...........{0}", Holz);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - (Schläge + 1))
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkYellow;
+                            Console.WriteLine("----------");
+                            Console.WriteLine(" {0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
                     }
                 }
-            }
-            else if (werkzeug == Werkzeuge.Spitzhacke)
-            {
-                for (int i = 1; i < Anzahl - (Schläge + 1); i++)
+                else if (werkzeug == Werkzeuge.Spitzhacke)
                 {
-                    Console.WriteLine("Schlagen...........{0}", Holz);
-                    if (i == Anzahl - (Schläge + 1))
+                    for (int i = 1; i < Anzahl - (Schläge + 1); i++)
                     {
-                        Console.WriteLine("----------");
-                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                        Console.ForegroundColor= ConsoleColor.DarkYellow;
+                        Console.WriteLine("Schlagen...........{0}", Holz);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - (Schläge + 1))
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkYellow;
+                            Console.WriteLine("----------");
+                            Console.WriteLine("{0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
                     }
                 }
             }
@@ -277,51 +337,69 @@ namespace Minecraft
         }
         public override void Abbau()
         {
-            if (werkzeug == Werkzeuge.Hand)
+            if (Console.BackgroundColor == ConsoleColor.Black)
             {
-                for (int i = 1; i < Anzahl - (Schläge * 1); i++)
+                if (werkzeug == Werkzeuge.Hand)
                 {
-                    Console.WriteLine("Schlagen...........{0}", Stein);
-                    if (i == Anzahl - (Schläge + 1))
+                    for (int i = 1; i < Anzahl - (Schläge * 1); i++)
                     {
-                        Console.WriteLine("----------");
-                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.WriteLine("Schlagen...........{0}", Stein);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - (Schläge + 1))
+                        {
+                            Console.ForegroundColor= ConsoleColor.DarkGray;
+                            Console.WriteLine("----------");
+                            Console.WriteLine("{0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
                     }
                 }
-            }
-            else if (werkzeug == Werkzeuge.Axt)
-            {
-                for (int i = 1; i < Anzahl - (Schläge * 1); i++)
+                else if (werkzeug == Werkzeuge.Axt)
                 {
-                    Console.WriteLine("Schlagen...........{0}", Stein);
-                    if (i == Anzahl - (Schläge + 1))
+                    for (int i = 1; i < Anzahl - (Schläge * 1); i++)
                     {
-                        Console.WriteLine("----------");
-                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.WriteLine("Schlagen...........{0}", Stein);
+                        if (i == Anzahl - (Schläge + 1))
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                            Console.WriteLine("----------");
+                            Console.WriteLine("{0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
                     }
                 }
-            }
-            else if (werkzeug == Werkzeuge.Schaufel)
-            {
-                for (int i = 1; i < Anzahl - (Schläge * 1); i++)
+                else if (werkzeug == Werkzeuge.Schaufel)
                 {
-                    Console.WriteLine("Schlagen...........{0}", Stein);
-                    if (i == Anzahl - (Schläge + 1))
+                    for (int i = 1; i < Anzahl - (Schläge * 1); i++)
                     {
-                        Console.WriteLine("----------");
-                        Console.WriteLine(" {0} ist kaputt ", werkzeug);
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.WriteLine("Schlagen...........{0}", Stein);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - (Schläge + 1))
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                            Console.WriteLine("----------");
+                            Console.WriteLine(" {0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
                     }
                 }
-            }
-            else if (werkzeug == Werkzeuge.Spitzhacke)
-            {
-                for (int i = 1; i < Anzahl - (Schläge + 2); i++)
+                else if (werkzeug == Werkzeuge.Spitzhacke)
                 {
-                    Console.WriteLine("Schlagen...........{0}", Stein);
-                    if (i == Anzahl - (Schläge + 2))
+                    for (int i = 1; i < Anzahl - (Schläge + 2); i++)
                     {
-                        Console.WriteLine("----------");
-                        Console.WriteLine("{0} ist kaputt ", werkzeug);
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.WriteLine("Schlagen...........{0}", Stein);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        if (i == Anzahl - (Schläge + 2))
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                            Console.WriteLine("----------");
+                            Console.WriteLine("{0} ist kaputt ", werkzeug);
+                            Console.ForegroundColor = ConsoleColor.White;
+                        }
                     }
                 }
             }
