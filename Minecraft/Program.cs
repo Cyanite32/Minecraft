@@ -489,7 +489,7 @@ namespace Minecraft
             Block1.Abbau();
             Erdblöcke Block2 = new Erdblöcke(19, 3, Werkzeuge.Axt);
             Block2.Abbau();
-            Holzblöcke Block3 = new Holzblöcke(100, 2, Werkzeuge.Spitzhacke);
+            Holzblöcke Block3 = new Holzblöcke(50, 2, Werkzeuge.Spitzhacke);
             Block3.Abbau();
             Steinblöcke Block4 = new Steinblöcke(10, 1, Werkzeuge.Schaufel);
             Block4.Abbau();
