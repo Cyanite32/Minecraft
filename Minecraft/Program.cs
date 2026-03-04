@@ -88,13 +88,48 @@ namespace Minecraft
         }
         public override void Abbau()
         {
-            for (int i = 1; i <= Anzahl+Schläge; i++)
+            if (werkzeug == Werkzeuge.Hand)
             {
-                Console.WriteLine("Schlagen...........{0}", Gras);
-
-                if (i == Anzahl)
+                for (int i = 1; i < Anzahl - (Schläge * 1); i++)
                 {
-                    Console.WriteLine(" {0} ist kaputt ", werkzeug);
+                    Console.WriteLine("Schlagen...........{0}", Gras);
+                    if (i == Anzahl - (Schläge * 1))
+                    {
+                        Console.WriteLine("{0} ist kaputt ", Werkzeuge.Hand);
+                    }
+                }
+            }
+            else if (werkzeug == Werkzeuge.Axt)
+            {
+                for (int i = 1; i < Anzahl - (Schläge * 2); i++)
+                {
+                    Console.WriteLine("Schlagen...........{0}", Gras);
+                    if (i == Anzahl - (Schläge * 2))
+                    {
+                        Console.WriteLine("{0} ist kaputt ", Werkzeuge.Axt);
+                    }
+                }
+            }
+            else if (werkzeug == Werkzeuge.Schaufel)
+            {
+                for (int i = 1; i < Anzahl - (Schläge * 3); i++)
+                {
+                    Console.WriteLine("Schlagen...........{0}", Gras);
+                    if (i == Anzahl - (Schläge * 3))
+                    {
+                        Console.WriteLine(" nix ist kaputt ");
+                    }
+                }
+            }
+            else if (werkzeug == Werkzeuge.Spitzhacke)
+            {
+                for (int i = 1; i < Anzahl - (Schläge * 4); i++)
+                {
+                    Console.WriteLine("Schlagen...........Luft");
+                    if (i == Anzahl - (Schläge * 4))
+                    {
+                        Console.WriteLine(" nix ist kaputt ");
+                    }
                 }
             }
         }
