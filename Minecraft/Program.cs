@@ -5,7 +5,6 @@ namespace Minecraft
     public abstract class Blöcke
     {
         public int Anzahl;
-
         public int Schläge;
 
         public enum Werkzeuge
