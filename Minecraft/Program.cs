@@ -596,6 +596,7 @@ namespace Minecraft
             Eisenblöcke Block5 = new Eisenblöcke(10, 1, Werkzeuge.Spitzhacke);
             Goldblöcke Block6 = new Goldblöcke(12, 3, Werkzeuge.Hand);
             
+
             Block1.Abbau();
             Block2.Abbau();
             Block3.Abbau();
