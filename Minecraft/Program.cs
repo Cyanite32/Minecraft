@@ -267,7 +267,7 @@ namespace Minecraft
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
                         Console.WriteLine("Schlagen...........{0}", Holz);
                         Console.ForegroundColor = ConsoleColor.White;
-                        if (i == Anzahl - Schläge )
+                        if (i == Anzahl - Schläge)
                         {
                             Console.ForegroundColor = ConsoleColor.DarkYellow;
                             Console.WriteLine("----------");
@@ -301,7 +301,7 @@ namespace Minecraft
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
                         Console.WriteLine("Schaufeln...........{0}", Holz);
                         Console.ForegroundColor = ConsoleColor.White;
-                        if (i == Anzahl - Schläge )
+                        if (i == Anzahl - Schläge)
                         {
                             Console.ForegroundColor = ConsoleColor.DarkYellow;
                             Console.WriteLine("----------");
@@ -369,7 +369,7 @@ namespace Minecraft
                     {
                         Console.ForegroundColor = ConsoleColor.DarkGray;
                         Console.WriteLine("Hacken...........{0}", Stein);
-                        Console.ForegroundColor= ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.White;
                         if (i == Anzahl - Schläge)
                         {
                             Console.ForegroundColor = ConsoleColor.DarkGray;
@@ -590,16 +590,17 @@ namespace Minecraft
         static void Main(string[] args)
         {
             Grasblöcke Block1 = new Grasblöcke(5, 1, Werkzeuge.Hand);
-            Block1.Abbau();
             Erdblöcke Block2 = new Erdblöcke(19, 3, Werkzeuge.Axt);
-            Block2.Abbau();
             Holzblöcke Block3 = new Holzblöcke(25, 2, Werkzeuge.Spitzhacke);
-            Block3.Abbau();
             Steinblöcke Block4 = new Steinblöcke(10, 1, Werkzeuge.Schaufel);
-            Block4.Abbau();
             Eisenblöcke Block5 = new Eisenblöcke(10, 1, Werkzeuge.Spitzhacke);
-            Block5.Abbau();
             Goldblöcke Block6 = new Goldblöcke(12, 3, Werkzeuge.Hand);
+            
+            Block1.Abbau();
+            Block2.Abbau();
+            Block3.Abbau();
+            Block4.Abbau();
+            Block5.Abbau();
             Block6.Abbau();
         }
     }
